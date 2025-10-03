@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HTML Documentation — Quick Reference</title>
+  <style>
+    :root{--bg:#f7fafc;--card:#ffffff;--muted:#475569;--accent:#2563eb;--mono:Menlo,Monaco,monospace}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial; margin:0;background:var(--bg);color:#0f1724}
+    .wrap{max-width:960px;margin:28px auto;padding:20px}
+    header{display:flex;flex-direction:column;gap:8px}
+    h1{margin:0;font-size:22px}
+    p.lead{margin:0;color:var(--muted)}
+    section{background:var(--card);padding:16px;border-radius:8px;box-shadow:0 1px 3px rgba(2,6,23,0.06);margin-top:16px}
+    h2{margin:0 0 8px 0;font-size:16px}
+    pre{background:#0b1220;color:#e6eef6;padding:12px;border-radius:6px;overflow:auto;font-family:var(--mono);font-size:13px}
+    ul{margin:8px 0 0 18px}
+    code{background:rgba(2,6,23,0.04);padding:2px 6px;border-radius:4px;font-family:var(--mono)}
+    .muted{color:var(--muted);font-size:14px}
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+    @media (max-width:640px){.wrap{padding:12px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>HTML Documentation — Quick Reference</h1>
+      <p class="lead">Concise guide to HTML structure, common elements, attributes, forms, media, semantics, accessibility, and best practices.</p>
+    </header>
+
+    <section id="intro">
+      <h2>1. What is HTML?</h2>
+      <p class="muted">HTML (HyperText Markup Language) defines the structure of web pages using elements represented by tags.</p>
+    </section>
+
+    <section id="structure">
+      <h2>2. Basic Document Structure</h2>
+      <pre>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;
+    &lt;title&gt;Page title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- content --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+    </section>
+
+    <section id="elements">
+      <h2>3. Common Elements</h2>
+      <ul>
+        <li><code>&lt;h1&gt;...&lt;/h1&gt;</code> — Headings (<code>h1</code> to <code>h6</code>).</li>
+        <li><code>&lt;p&gt;</code> — Paragraphs.</li>
+        <li><code>&lt;a href="..."&gt;</code> — Links; use <code>rel="noopener noreferrer"</code> for external links.</li>
+        <li><code>&lt;img src="..." alt="..."&gt;</code> — Images (always include <code>alt</code>).</li>
+        <li><code>&lt;ul&gt;/&lt;ol&gt;/&lt;li&gt;</code> — Lists.</li>
+        <li><code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> — Generic containers.</li>
+      </ul>
+    </section>
+
+    <section id="attributes">
+      <h2>4. Attributes</h2>
+      <p class="muted">Attributes provide additional information for elements.</p>
+      <ul>
+        <li><code>id</code> — Unique identifier.</li>
+        <li><code>class</code> — Reusable styling hook.</li>
+        <li><code>data-*</code> — Custom data attributes for JS.</li>
+        <li><code>aria-*</code> — Accessibility attributes (ARIA).</li>
+      </ul>
+    </section>
+
+    <section id="semantics">
+      <h2>5. Semantic Elements</h2>
+      <p class="muted">Use semantic tags to convey meaning and improve accessibility & SEO.</p>
+      <ul>
+        <li><code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code>.</li>
+      </ul>
+    </section>
+
+    <section id="forms">
+      <h2>6. Forms & Inputs</h2>
+      <pre>&lt;form action="/submit" method="post"&gt;
+  &lt;label for="email"&gt;Email&lt;/label&gt;
+  &lt;input type="email" id="email" name="email" required&gt;
+  &lt;button type="submit"&gt;Send&lt;/button&gt;
+&lt;/form&gt;</pre>
+      <p class="muted">Use proper <code>label</code>, validation (<code>required</code>, <code>type</code>), and <code>autocomplete</code> attributes.</p>
+    </section>
+
+    <section id="media">
+      <h2>7. Media Elements</h2>
+      <ul>
+        <li><code>&lt;img&gt;</code> — Provide <code>alt</code> for accessibility.</li>
+        <li><code>&lt;picture&gt;</code> — Responsive images (different sources).</li>
+        <li><code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> — Include captions and controls.</li>
+      </ul>
+    </section>
+
+    <section id="accessibility">
+      <h2>8. Accessibility Tips</h2>
+      <ul>
+        <li>Use semantic HTML and proper heading order.</li>
+        <li>Add <code>alt</code> for images and <code>aria-label</code> when needed.</li>
+        <li>Ensure focus order and visible focus states for keyboard users.</li>
+      </ul>
+    </section>
+
+    <section id="best-practices">
+      <h2>9. Best Practices</h2>
+      <ul>
+        <li>Keep markup semantic and minimal.</li>
+        <li>Separate concerns: HTML for structure, CSS for style, JS for behavior.</li>
+        <li>Validate HTML (validator.w3.org) and test across browsers/devices.</li>
+        <li>Use <code>rel="noopener"</code> for external links and avoid inline JS/CSS where possible.</li>
+      </ul>
+    </section>
+
+    <section id="resources">
+      <h2>10. Further Resources</h2>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">MDN — HTML Reference</a></li>
+        <li><a href="https://html.spec.whatwg.org/">WHATWG HTML Living Standard</a></li>
+        <li><a href="https://validator.w3.org/">W3C Markup Validation Service</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      Quick HTML reference • Keep it semantic • Test for accessibility
+    </footer>
+  </div>
+</body>
+</html>
